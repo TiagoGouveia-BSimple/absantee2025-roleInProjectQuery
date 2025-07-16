@@ -1,0 +1,14 @@
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\bin\Debug\net9.0\InterfaceAdapters.exe
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\bin\Debug\net9.0\InterfaceAdapters.deps.json
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\bin\Debug\net9.0\InterfaceAdapters.runtimeconfig.json
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\bin\Debug\net9.0\InterfaceAdapters.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\bin\Debug\net9.0\InterfaceAdapters.pdb
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.AssemblyInfoInputs.cache
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.AssemblyInfo.cs
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.csproj.CoreCompileInputs.cache
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\refint\InterfaceAdapters.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.pdb
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\InterfaceAdapters.genruntimeconfig.cache
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\InterfaceAdapters\obj\Debug\net9.0\ref\InterfaceAdapters.dll

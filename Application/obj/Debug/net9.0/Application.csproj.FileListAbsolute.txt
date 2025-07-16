@@ -1,0 +1,11 @@
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\bin\Debug\net9.0\Application.deps.json
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\bin\Debug\net9.0\Application.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\bin\Debug\net9.0\Application.pdb
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\refint\Application.dll
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\Application.pdb
+C:\Users\tiagogouveia\Desktop\classes\lastEvaluation\absantee2025-roleInProjectQuery\Application\obj\Debug\net9.0\ref\Application.dll
