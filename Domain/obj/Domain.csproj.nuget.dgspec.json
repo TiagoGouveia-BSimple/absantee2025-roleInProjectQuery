@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiagogouveia\\Desktop\\classes\\lastEvaluation\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj": {}
+    "C:\\Users\\tigou\\Desktop\\work\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiagogouveia\\Desktop\\classes\\lastEvaluation\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj": {
+    "C:\\Users\\tigou\\Desktop\\work\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiagogouveia\\Desktop\\classes\\lastEvaluation\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\tigou\\Desktop\\work\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\tiagogouveia\\Desktop\\classes\\lastEvaluation\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\tiagogouveia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiagogouveia\\Desktop\\classes\\lastEvaluation\\absantee2025-roleInProjectQuery\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\tigou\\Desktop\\work\\absantee2025-roleInProjectQuery\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\tigou\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tigou\\Desktop\\work\\absantee2025-roleInProjectQuery\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tiagogouveia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tigou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
