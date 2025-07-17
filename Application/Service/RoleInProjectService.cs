@@ -86,4 +86,24 @@ public class RoleInProjectService : IRoleInProjectService
             return Result<RoleInProjectDTO?>.Failure(Error.InternalServerError(ex.Message));
         }
     }
+
+    public async Task<Result<UpdatedRoleInProjectDTO>> Update(Guid id, UpdateRoleInProjectDTO updateRoleInProjectDTO)
+    {
+        try
+        {
+            var roleInProject = await RoleInProjectRepository.UpdateRoleInProject(id,
+                updateRoleInProjectDTO.projectId, updateRoleInProjectDTO.period,
+                updateRoleInProjectDTO.userId, updateRoleInProjectDTO.roleId);
+
+            var res = new UpdatedRoleInProjectDTO(roleInProject.Id,
+                roleInProject.ProjectId, roleInProject.Period,
+                roleInProject.UserId, roleInProject.RoleId);
+
+            return Result<UpdatedRoleInProjectDTO>.Success(res);
+        }
+        catch (ArgumentException ex)
+        {
+            return Result<UpdatedRoleInProjectDTO>.Failure(Error.InternalServerError(ex.Message));
+        }
+    }
 }

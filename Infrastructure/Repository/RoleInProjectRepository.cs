@@ -2,9 +2,11 @@ using AutoMapper;
 using Domain.IModel;
 using Domain.IRepository;
 using Domain.Model;
+using Domain.Models;
 using Infrastructure.DataModel;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure.Internal;
 
 namespace Infrastructure.Repository;
 
@@ -45,5 +47,21 @@ public class RoleInProjectRepository : GenericRepositoryEF<IRoleInProject, RoleI
 
         var roleInProject = _mapper.Map<RoleInProjectDataModel, RoleInProject>(roleInProjectDM);
         return roleInProject;
+    }
+
+    public async Task<RoleInProject> UpdateRoleInProject(Guid id, Guid projectId, PeriodDate period, Guid userId, Guid roleId)
+    {
+        var dm = await _context.Set<RoleInProjectDataModel>()
+            .FirstAsync(r => r.Id == id);
+
+        dm.ProjectId = projectId;
+        dm.Period = period;
+        dm.UserId = userId;
+        dm.RoleId = roleId;
+        _context.Entry(dm).State = EntityState.Modified;
+
+        await _context.SaveChangesAsync();
+
+        return _mapper.Map<RoleInProjectDataModel, RoleInProject>(dm);
     }
 }
