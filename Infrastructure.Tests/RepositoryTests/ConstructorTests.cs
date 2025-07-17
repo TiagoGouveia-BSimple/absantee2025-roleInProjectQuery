@@ -11,7 +11,7 @@ public class ConstructorTests : RepositoryTestBase
 
 
         // Act
-        new RoleInProjectRepository(context, mapper);
+        new RoleInProjectRepository(context, mapper.Object);
     
         // Assert
     }
