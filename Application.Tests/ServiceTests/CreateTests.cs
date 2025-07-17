@@ -42,7 +42,7 @@ public class CreateTests
         // Assert
         Assert.NotNull(result);
         Assert.True(result.IsSuccess);
-        Assert.Equal(id, result.Value.id);
+        Assert.Equal(id, result.Value.roleInProjectId);
         Assert.Equal(id, result.Value.projectId);
         Assert.Equal(period, result.Value.period);
         Assert.Equal(id, result.Value.userId);

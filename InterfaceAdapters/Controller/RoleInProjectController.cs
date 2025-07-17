@@ -21,7 +21,7 @@ public class RoleInProjectController : ControllerBase
     public async Task<ActionResult<IEnumerable<RoleInProjectDTO>>> GetAll()
     {
         var result = await _roleInProjectService.GetAll();
-        return Ok(result);
+        return result.ToActionResult();
     }
 
     // Get: api/role-in-project/{id}
@@ -30,9 +30,6 @@ public class RoleInProjectController : ControllerBase
     {
         var result = await _roleInProjectService.GetById(id);
 
-        if (result == null)
-            return NotFound(result);
-
-        return Ok(result);
+        return result.ToActionResult();
     }
 }
