@@ -95,6 +95,22 @@ public class RoleInProjectService : IRoleInProjectService
         }
     }
 
+    public async Task<Result<IEnumerable<RoleInProjectDTO>>> GetAllByProjectId(Guid projectId)
+    {
+        try
+        {
+            var roleInProjects = await RoleInProjectRepository.GetAllByProjectId(projectId);
+
+            var res = roleInProjects.Select(r => new RoleInProjectDTO(r.Id, r.ProjectId, r.Period, r.UserId, r.RoleId));
+            
+            return Result<IEnumerable<RoleInProjectDTO>>.Success(res);
+        }
+        catch (ArgumentException ex)
+        {
+            return Result<IEnumerable<RoleInProjectDTO>>.Failure(Error.InternalServerError(ex.Message));
+        }
+    }
+
     public async Task<Result<UpdatedRoleInProjectDTO>> Update(Guid id, UpdateRoleInProjectDTO updateRoleInProjectDTO)
     {
         try

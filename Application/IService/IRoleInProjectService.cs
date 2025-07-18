@@ -11,5 +11,5 @@ public interface IRoleInProjectService
     Task UpdateConsumed(Guid id, Guid projectId, PeriodDate period, Guid userId, Guid roleId);
     Task<Result<IEnumerable<RoleInProjectDTO>>> GetAll();
     Task<Result<RoleInProjectDTO?>> GetById(Guid id);
-    Task<Result<IEnumerable<RoleInProjectDTO>>> GetByProjectId(Guid projectId);
+    Task<Result<IEnumerable<RoleInProjectDTO>>> GetAllByProjectId(Guid projectId);
 }

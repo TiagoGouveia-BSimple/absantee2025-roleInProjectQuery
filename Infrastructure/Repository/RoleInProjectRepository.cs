@@ -27,6 +27,13 @@ public class RoleInProjectRepository : GenericRepositoryEF<IRoleInProject, RoleI
         return true;
     }
 
+    public async Task<IEnumerable<RoleInProject>> GetAllByProjectId(Guid projectId)
+    {
+        var roleInProjectDMs = await _context.Set<RoleInProjectDataModel>().Where(r => r.ProjectId == projectId).ToListAsync();
+
+        return roleInProjectDMs.Select(_mapper.Map<RoleInProjectDataModel, RoleInProject>);
+    }
+
     public override IRoleInProject? GetById(Guid id)
     {
         var roleInProjectDM = _context.Set<RoleInProjectDataModel>().FirstOrDefault(r => r.Id == id);

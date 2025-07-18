@@ -34,10 +34,10 @@ public class RoleInProjectController : ControllerBase
         return result.ToActionResult();
     }
 
-    // Get: api/role-in-project/by-project?projId=id
+    // Get: api/role-in-project/by-project?projectId={id}
     [HttpGet("by-project")]
     public async Task<ActionResult<IEnumerable<RoleInProjectDTO>>> GetByProjectId([FromQuery] Guid projectId) {
-        var result = await _roleInProjectService.GetByProjectId(projectId);
+        var result = await _roleInProjectService.GetAllByProjectId(projectId);
 
         return result.ToActionResult();
     }
