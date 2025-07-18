@@ -1,3 +1,4 @@
+using System.Reflection.Metadata.Ecma335;
 using Application.DTO;
 using Application.IService;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +30,14 @@ public class RoleInProjectController : ControllerBase
     public async Task<ActionResult<RoleInProjectDTO>> GetById(Guid id)
     {
         var result = await _roleInProjectService.GetById(id);
+
+        return result.ToActionResult();
+    }
+
+    // Get: api/role-in-project/by-project?projId=id
+    [HttpGet("by-project")]
+    public async Task<ActionResult<IEnumerable<RoleInProjectDTO>>> GetByProjectId([FromQuery] Guid projectId) {
+        var result = await _roleInProjectService.GetByProjectId(projectId);
 
         return result.ToActionResult();
     }

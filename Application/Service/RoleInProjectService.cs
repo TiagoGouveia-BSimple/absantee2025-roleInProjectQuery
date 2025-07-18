@@ -1,4 +1,5 @@
 using Application.DTO;
+using Application.IPublisher;
 using Application.IService;
 using Domain.IFactory;
 using Domain.IRepository;
@@ -11,11 +12,14 @@ public class RoleInProjectService : IRoleInProjectService
 {
     private readonly IRoleInProjectRepository RoleInProjectRepository;
     private readonly IRoleInProjectFactory RoleInProjectFactory;
+    private readonly IMessagePublisher MessagePublisher;
 
-    public RoleInProjectService(IRoleInProjectRepository roleInProjectRepository, IRoleInProjectFactory roleInProjectFactory)
+    public RoleInProjectService(IRoleInProjectRepository roleInProjectRepository,
+        IRoleInProjectFactory roleInProjectFactory, IMessagePublisher messagePublisher)
     {
         RoleInProjectRepository = roleInProjectRepository;
         RoleInProjectFactory = roleInProjectFactory;
+        MessagePublisher = messagePublisher;
     }
 
     public async Task<Result<CreatedRoleInProjectDTO>> Create(CreateRoleInProjectDTO createRoleInProjectDTO)
@@ -29,6 +33,10 @@ public class RoleInProjectService : IRoleInProjectService
             roleInProject = await RoleInProjectRepository.AddAsync(roleInProject);
 
             var res = new CreatedRoleInProjectDTO(roleInProject.Id, 
+                roleInProject.ProjectId, roleInProject.Period,
+                roleInProject.UserId, roleInProject.RoleId);
+
+            await MessagePublisher.PublishRoleInProjectCreatedMessageAsync(roleInProject.Id, 
                 roleInProject.ProjectId, roleInProject.Period,
                 roleInProject.UserId, roleInProject.RoleId);
 
@@ -98,6 +106,10 @@ public class RoleInProjectService : IRoleInProjectService
             var res = new UpdatedRoleInProjectDTO(roleInProject.Id,
                 roleInProject.ProjectId, roleInProject.Period,
                 roleInProject.UserId, roleInProject.RoleId);
+            
+            await MessagePublisher.PublishRoleInProjectUpdatedMessageAsync(roleInProject.Id, 
+                roleInProject.ProjectId, roleInProject.Period,
+                roleInProject.UserId, roleInProject.RoleId);
 
             return Result<UpdatedRoleInProjectDTO>.Success(res);
         }
@@ -105,5 +117,17 @@ public class RoleInProjectService : IRoleInProjectService
         {
             return Result<UpdatedRoleInProjectDTO>.Failure(Error.InternalServerError(ex.Message));
         }
+    }
+
+    public async Task UpdateConsumed(Guid id, Guid projectId, PeriodDate period, Guid userId, Guid roleId)
+    {
+        var dm = await RoleInProjectRepository.GetByIdAsync(id);
+
+        if (dm.Id == id && dm.ProjectId == projectId && dm.Period == period &&
+            dm.UserId == userId && dm.RoleId == roleId) return;
+
+        await RoleInProjectRepository.UpdateRoleInProject(id,
+            projectId, period,
+            userId, roleId);
     }
 }

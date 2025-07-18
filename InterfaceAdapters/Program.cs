@@ -52,6 +52,7 @@ builder.Services.AddAutoMapper(cfg =>
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<RoleInProjectCreatedConsumer>();
+    x.AddConsumer<RoleInProjectUpdatedConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -65,6 +66,7 @@ builder.Services.AddMassTransit(x =>
         cfg.ReceiveEndpoint($"roleInProjectQuery-{instance}", conf =>
         {
             conf.ConfigureConsumer<RoleInProjectCreatedConsumer>(context);
+            conf.ConfigureConsumer<RoleInProjectUpdatedConsumer>(context);
         });
     });
 });
